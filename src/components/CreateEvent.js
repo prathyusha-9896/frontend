@@ -4,6 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import Header from './Header';
 const CreateEvent = () => {
   const [step, setStep] = useState(1); // Tracks the current step
   const [eventType, setEventType] = useState('');
@@ -282,6 +283,7 @@ const CreateEvent = () => {
     <div className='flex min-h-screen'>
         <Navbar/>
     <div className="container flex flex-col mx-auto p-6 bg-white rounded-lg max-w-3xl">
+        <Header/>
         {step === 1 && renderEventTypeSelection()}
         {step === 2 && renderHostSelection()}
         {step === 3 && renderEventCreationForm()}

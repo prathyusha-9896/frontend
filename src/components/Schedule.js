@@ -5,6 +5,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
 import Navbar from './Navbar';
+import Header from './Header';
 const Schedule = () => {
   const { name } = useParams();  // Get the name from the URL
   const [availability, setAvailability] = useState([]);
@@ -68,6 +69,7 @@ const Schedule = () => {
     <div className='flex min-h-screen'>
         <Navbar/>
     <div className="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg max-w-3xl">
+        <Header/>
       <h2 className="text-3xl font-bold text-center mb-6">Schedule a Meeting with {name}</h2>
       {availability.length > 0 ? (
         <div className="flex flex-col lg:flex-row gap-8">

@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
 import Navbar from './Navbar';
+import Header from './Header';
 const ScheduleDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -67,6 +68,7 @@ const ScheduleDetails = () => {
     <div className='flex min-h-screen'>
         <Navbar/>
     <div className="container mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg max-w-lg">
+        <Header/>
       <h2 className="text-2xl font-bold text-center mb-6">Confirm Your Meeting</h2>
 
       <div className="mb-4">

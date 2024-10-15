@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import Header from './Header';
 
 const Home = () => {
   const [scheduledAvailabilities, setScheduledAvailabilities] = useState([]);
@@ -30,6 +31,7 @@ const Home = () => {
       <Navbar/>
 
       <div className="ml-[15%] w-[85%] p-6">
+        <Header/>
         {isEmpty ? (
           <div className="text-center">
             <h3 className="text-xl font-semibold mb-4">No schedules or events available</h3>

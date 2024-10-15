@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
 import Navbar from './Navbar';  // Import the Navbar component
+import Header from './Header';
 
 const Availability = () => {
   const [meetingDetails, setMeetingDetails] = useState({
@@ -123,9 +124,10 @@ const Availability = () => {
   return (
     <div className="flex min-h-screen">
       {/* Render Navbar component at the top */}
-      <Navbar />
+      <Navbar className=""/>
 
       <div className="container mx-auto p-4">
+        <Header className=""/>
         <h2 className="text-2xl font-bold mb-4 text-center">Set Your Availability</h2>
         {/* Flex container to hold the calendar and form fields side by side */}
         <div className="flex flex-col justify-center items-center lg:flex-row lg:space-x-36 bg-white rounded px-8 pt-6 pb-8 mb-4 w-full max-w-3xl mx-auto">

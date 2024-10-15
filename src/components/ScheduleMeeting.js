@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import Navbar from './Navbar';
+import Header from './Header';
 
 const ScheduleMeeting = () => {
   const [meetingDetails, setMeetingDetails] = useState({
@@ -70,6 +71,7 @@ const ScheduleMeeting = () => {
       <Navbar /> {/* Sidebar remains fixed */}
       <div className="flex-grow flex justify-center items-center p-6">
         <div className="container max-w-lg bg-white rounded-lg p-6">
+            <Header/>
           <h2 className="text-2xl font-semibold mb-4 text-center">Schedule a Meeting</h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
