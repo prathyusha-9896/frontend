@@ -1,3 +1,9 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,62 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* Custom Datepicker CSS */
+
+/* Change background color for selected dates */
+.react-datepicker__day--selected {
+  background-color: #0F766E; /* Green background for selected date */
+  color: white;
+}
+
+.react-datepicker__day--highlighted {
+  background-color: #0F766E; /* Yellow background for highlighted date */
+  color: black;
+}
+
+/* Customize calendar container */
+.react-datepicker {
+  border: 1px solid #99F6E4;
+  border-radius: 10px;
+}
+
+/* Change header background color */
+.react-datepicker__header {
+  background-color: #0D9488;
+  border-bottom: none;
+}
+
+/* Change day names and navigation button color */
+.react-datepicker__current-month,
+.react-datepicker__day-name,
+.react-datepicker__navigation {
+  color: white;
+}
+
+
+.schedule-container, .schedule-details-container {
+  padding: 20px;
+}
+
+.calendar-section button, .time-slot-section button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #007bff;
+  background-color: #f0f8ff;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.next-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
